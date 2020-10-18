@@ -6,7 +6,37 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
 header {
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  .logo {
+    font-weight: normal; // (font-weight > normal et < bold)
+    // text-transform: uppercase;
+    span {
+      color: orange;
+    }
+  }
+  .navbar {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+  }
+  .navbar--item {
+    font-size: 18px;
+    margin-right: 12px;
+  }
 }
 
 main {
