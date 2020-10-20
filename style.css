@@ -27,7 +27,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 32px;
+  padding: 0 250px;
 }
 
 header .logo {

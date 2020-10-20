@@ -20,7 +20,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 32px;
+  padding: 0 250px;
   .logo {
     font-weight: normal; // (font-weight > normal et < bold)
     // text-transform: uppercase;
@@ -38,6 +38,16 @@ header {
     margin-right: 12px;
   }
 }
+
+// .carousel {
+//   img {
+//     opacity: 0;
+//     transition: opacity 2s;
+//   }
+//   .open {
+//     opacity: 1;
+//   }
+// }
 
 main {
 }
