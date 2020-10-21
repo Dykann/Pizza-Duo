@@ -15,6 +15,12 @@ ul {
   list-style-type: none;
 }
 
+.menu-heading--number,
+.menu-heading--title {
+  font-size: 20px;
+  font-weight: normal;
+}
+
 header {
   height: 8vh;
   display: flex;
@@ -72,7 +78,36 @@ main {
       text-align: left;
     }
   }
+  .menu {
+    max-width: 850px;
+    min-height: 1000px;
+    margin: 0 auto;
+    padding-top: 32px;
+    border-radius: 1000px;
+    background-color: wheat;
+    text-align: center;
+    > * {
+      margin-bottom: 32px;
+    }
+  }
+  .pizza-du-mois {
+    border: 1px solid black;
+    max-width: 545px;
+    padding: 8px 0;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    .pizza-du-mois--title {
+    }
+    .pizza-du-mois--ingredients {
+    }
+  }
 }
 
-footer {
+@media (max-width: 768px) {
+  main {
+    .menu {
+      border-radius: 300px;
+    }
+  }
 }
