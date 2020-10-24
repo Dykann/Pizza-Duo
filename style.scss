@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 a {
@@ -59,7 +60,7 @@ main {
     max-width: 768px;
     margin: 0 auto;
     padding: 24px 24px;
-    background-color: rgb(242, 159, 100);
+    background-color: #f15c5cd3;
     .heading {
       display: flex;
       flex-direction: column;
@@ -68,7 +69,7 @@ main {
       margin: 0 auto;
       margin-bottom: 12px;
     }
-    .price {
+    .heading--title--price {
       font-weight: bold;
       font-size: 24px;
       text-decoration: underline;
@@ -83,8 +84,8 @@ main {
     min-height: 1000px;
     margin: 0 auto;
     padding-top: 32px;
-    border-radius: 600px;
-    background-color: wheat;
+    border-radius: 800px;
+    background-color: #ffd099d1;
     text-align: center;
     > * {
       margin-bottom: 32px;
@@ -101,53 +102,119 @@ main {
 
   .pizzas-list {
     text-align: left;
+    margin-bottom: 24px;
     padding-left: 124px;
     .pizzas-list--category {
       margin-bottom: 32px;
+      font-size: 18px;
+      text-decoration: underline;
     }
     .pizza {
       line-height: 20px;
+      .pizza-name {
+        font-size: 16px;
+      }
+      .pizza-ingredients,
+      .pizza--special--ingredients {
+        color: rgb(166, 164, 164);
+        font-size: 14px;
+        // target par une couleur l'ingrédient qui change d'une pizza à une autre ?
+        // changer la couleur => plus claire ?
+      }
+      .pizza-price {
+        font-size: 14px; // font-size => plus petite ?
+        font-weight: bold;
+        // changer la couleur => afin d'emphasise le prix ?
+      }
     }
-    .pizza--vegan {
+    .pizza--vegan,
+    .pizza--baguette {
       position: relative;
     }
-    .pizza--vegan::before {
-      background-image: url("/public/logo-vegan.png");
+    .pizza--vegan::before,
+    .pizza--baguette::before,
+    .pizza--vegan.pizza--baguette:before,
+    .pizza--baguette.pizza--vegan::after {
+      content: "";
       background-repeat: no-repeat;
       background-size: 15px 15px;
       display: inline-block;
       width: 15px;
       height: 15px;
+      border-radius: 100px;
       position: absolute;
+      top: 25%;
       left: -25px;
-      top: 50%;
-      transform: translateY(-50%);
-      content: "";
+      transform: translateY(-25%);
     }
+
+    .pizza--vegan::before,
+    .pizza--baguette.pizza--vegan::before {
+      background-image: url("/public/logo-vegan.jpg");
+    }
+
+    .pizza--baguette::before,
+    .pizza--vegan.pizza--baguette::after {
+      background-image: url("/public/baguette.png");
+    }
+
+    .pizza--vegan.pizza--baguette::after {
+      left: -40px;
+    }
+
     .pizza--special {
       display: flex;
+      .colon {
+        font-weight: normal;
+        margin-right: 4px;
+      }
       .highlight {
         color: orange;
       }
       .pizza--special--ingredients {
-        margin-left: 4px;
-        display: inline-block;
-        width: 375px;
+        width: 320px;
+        margin-top: 1px;
       }
     }
   }
   .menu-line--separation {
-    border-top: 1px solid black;
+    border-top: 1px solid black; // or solid?
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px;
+    max-width: 790px;
+    margin-bottom: 24px;
+  }
+  .menu-bottom {
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    .desc,
+    .products-desc {
+      font-size: 14px; // 14-16px?
+    }
+    .desc {
+      margin-bottom: 24px;
+    }
   }
 }
 
 @media (max-width: 768px) {
   main {
     .menu {
-      border-radius: 300px;
+      border-radius: 128px;
+      .pizza-du-mois {
+        max-width: 400px;
+      }
+      .pizzas-list {
+        padding-left: 42px;
+        .pizzas-list--category {
+          text-align: left;
+        }
+      }
     }
   }
 }
