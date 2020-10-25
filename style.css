@@ -32,6 +32,13 @@ header {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  background-color: white;
+  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 header .logo {

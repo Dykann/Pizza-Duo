@@ -26,6 +26,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  background-color: white;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   .logo {
     font-weight: normal; // (font-weight > normal et < bold)
     // text-transform: uppercase;
