@@ -40,3 +40,6 @@
 // function isse() {
 //   image.classList.add("open");
 // }
+
+// const slideshow = document.querySelector(".carousel-images");
+// console.log(slideshow);
