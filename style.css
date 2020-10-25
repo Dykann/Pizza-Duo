@@ -99,6 +99,7 @@ main .menu {
   max-width: 850px;
   min-height: 1000px;
   margin: 0 auto;
+  margin-bottom: 16px;
   padding-top: 32px;
   border-radius: 800px;
   background-color: #ffd099d1;
@@ -236,6 +237,33 @@ main .menu-bottom .products-desc {
 
 main .menu-bottom .desc {
   margin-bottom: 24px;
+}
+
+.drinks-desserts {
+  background-color: #adabab;
+  max-width: 500px;
+  padding: 24px;
+  margin: 0 auto;
+}
+
+.drinks-desserts .drinks-desserts--title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.drinks-desserts .drinks {
+  margin-bottom: 24px;
+}
+
+.drinks-desserts .category {
+  padding-left: 24px;
+  margin-bottom: 16px;
+  text-decoration: underline;
+}
+
+.drinks-desserts .subcategory {
+  margin-bottom: 12px;
 }
 
 @media (max-width: 768px) {

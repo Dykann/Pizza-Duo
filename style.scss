@@ -82,6 +82,7 @@ main {
     max-width: 850px;
     min-height: 1000px;
     margin: 0 auto;
+    margin-bottom: 16px;
     padding-top: 32px;
     border-radius: 800px;
     background-color: #ffd099d1;
@@ -206,6 +207,29 @@ main {
     .desc {
       margin-bottom: 24px;
     }
+  }
+}
+
+.drinks-desserts {
+  background-color: rgb(173, 171, 171);
+  max-width: 500px;
+  padding: 24px;
+  margin: 0 auto;
+  .drinks-desserts--title {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  .drinks {
+    margin-bottom: 24px;
+  }
+  .category {
+    padding-left: 24px;
+    margin-bottom: 16px;
+    text-decoration: underline;
+  }
+  .subcategory {
+    margin-bottom: 12px;
   }
 }
 
