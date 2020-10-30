@@ -10,24 +10,28 @@
   <body>
     <header>
       <h1 class="logo">
-        <a href="#">Pizza Du<span class="">o</span></a>
+        <a href="#">Pizza Du<span class="o-animation">o</span></a>
       </h1>
       <nav>
         <ul class="navbar">
-          <li class="navbar--item"><a href="#">La Carte</a></li>
-          <li class="navbar--item"><a href="#">Nous Trouver</a></li>
-          <li class="navbar--item"><a href="#">Avis</a></li>
+          <li class="navbar--item"><a href="#carte">La Carte</a></li>
+          <!-- <li class="navbar--item"><a href="#">Nous Trouver</a></li> -->
+          <li class="navbar--item"><a href="#avis">Avis</a></li>
         </ul>
       </nav>
     </header>
-    <figure class="carousel">
-      <!-- <img class="carousel-images" name="img" width="400" height="200" /> -->
+    <figure class="slideshow">
+      <img src="/public/showcase-pizza.jpg"class="slideshow-img">
+      <img src="/public/showcase-dough.jpg"class="slideshow-img">
+      <img src="/public/showcase-ingredients.jpeg"class="slideshow-img">
     </figure>
     <main>
       <section class="formule-midi">
         <div class="heading">
-          <h1 class="heading--title">Formule midi</h1>
-          <h2 class="heading--pizza-baguette">La Pizza Baguette</h2>
+          <div class="title--pizza-baguette">
+            <h1 class="heading--title">Formule midi</h1>
+            <h2 class="heading--pizza-baguette">La Pizza Baguette</h2>
+          </div>
         </div>
         <img src="/public/pizza-baguette.png" alt="Pizza-Baguette" />
         <p class="heading--title--price">6,00€</p>
@@ -42,7 +46,7 @@
           </li>
         </ul>
       </section>
-      <section class="menu">
+      <section class="menu" id="carte">
         <div class="menu-heading">
           <h1 class="menu-heading--title">Carte Pizza Duo</h1>
           <h2 class="menu-heading--number">à emporter au : 01 30 44 13 14</h2>
@@ -250,9 +254,11 @@
       <section class="drinks-desserts">
         <h2 class="drinks-desserts--title">Carte des boissons et desserts</h3>
           <div class="drinks">
-          <h3 class="category drinks-title">Boissons</h3>
+            <div class="logo-title">
+              <img src="/public/drink.jpg"width="25"height="25" alt="drink-img">
+              <h3 class="category">Boissons</h3>
+            </div>
           <div class="subcategory">
-            <!-- <img src="" alt=""> logo boisson -->
             <h4>Soda :</h4>
             <ul> 
               <li>Coca, Cola light, Tropico exotique, canettes de 33cl <strong>2.00€</strong></li>
@@ -276,9 +282,11 @@
             </ul>
           </div>
           </div>
-            <div class="desserts desserts-title">
-              <!-- <img src="" alt=""> logo dessert -->
-            <h3 class="category">Desserts</h3>
+            <div class="desserts">
+              <div class="logo-title">                
+                <img src="/public/dessert.jpg"width="25"height="25" alt="dessert-img">
+                <h3 class="category">Desserts</h3>
+              </div>
               <ul>
                 <li>Panna cotta, coulis fruits exotiques ou fruits rouge <strong>2.50€</strong></li>
                 <li>Tiramisu <strong>2.50€</strong></li>
@@ -287,6 +295,10 @@
             </div>          
       </section>
     </main>
-    <footer></footer>
+    <section class="avis" id="avis">
+      <h1 class="avis-title">Nos avis sur Google</h1>
+      <ul class="reviews">
+      </ul>
+    </section>
   </body>
 </html>

@@ -4,6 +4,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  // font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial,
+  // sans-serif;
 }
 
 a {
@@ -26,7 +32,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: white;
+  background-color: gray;
   z-index: 1;
   position: sticky;
   top: 0;
@@ -35,8 +41,15 @@ header {
   .logo {
     font-weight: normal; // (font-weight > normal et < bold)
     // text-transform: uppercase;
-    span {
+    .o-animation {
       color: orange;
+      font-size: 12px;
+      opacity: 0;
+      transition: all 2s;
+    }
+    .open {
+      opacity: 1;
+      font-size: 32px;
     }
   }
   .navbar {
@@ -49,8 +62,18 @@ header {
   }
 }
 
-// .carousel {
-// }
+.slideshow {
+  height: 75vh;
+  background-color: black;
+  position: relative;
+  .slideshow-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+}
 
 main {
   .formule-midi {
@@ -61,182 +84,230 @@ main {
     background-color: #f15c5cd3;
     border-radius: 8px;
     .heading {
-      display: flex;
-      flex-direction: column;
       border: 1px solid black;
       max-width: 300px;
       margin: 0 auto;
       margin-bottom: 12px;
     }
-    .heading--title--price {
-      font-weight: bold;
-      font-size: 24px;
-      text-decoration: underline;
-      margin-bottom: 24px;
-    }
-    .choices {
-      text-align: left;
-    }
-  }
-  .menu {
-    max-width: 850px;
-    min-height: 1000px;
-    margin: 0 auto;
-    margin-bottom: 16px;
-    padding-top: 32px;
-    border-radius: 800px;
-    background-color: #ffd099d1;
-    text-align: center;
-    > * {
-      margin-bottom: 32px;
-    }
-  }
-  .pizza-du-mois {
-    border: 1px solid black;
-    max-width: 545px;
-    padding: 8px 0;
-    line-height: 24px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
-  .pizzas-list {
-    text-align: left;
+  .heading--title--price {
+    font-size: 24px;
     margin-bottom: 24px;
-    padding-left: 124px;
-    .pizzas-list--category {
-      margin-bottom: 24px;
-      font-size: 18px;
-      text-decoration: underline;
-    }
-    .pizza {
-      line-height: 20px;
-      .pizza-name {
-        font-size: 16px;
-      }
-      .pizza-ingredients,
-      .pizza--special--ingredients {
-        color: rgb(166, 164, 164);
-        font-size: 14px;
-        // target par une couleur l'ingrédient qui change d'une pizza à une autre ?
-        // changer la couleur => plus claire ?
-      }
-      .pizza-price {
-        font-size: 14px; // font-size => plus petite ?
-        color: black;
-        font-weight: bold;
-        // changer la couleur => afin d'emphasise le prix ?
-      }
-    }
-    .pizza--vegan,
-    .pizza--baguette {
-      position: relative;
-    }
-    .pizza--vegan::before,
-    .pizza--baguette::before,
-    .pizza--vegan.pizza--baguette:before,
-    .pizza--baguette.pizza--vegan::after {
-      content: "";
-      background-repeat: no-repeat;
-      background-size: 15px 15px;
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      border-radius: 100px;
-      position: absolute;
-      top: 25%;
-      left: -25px;
-      transform: translateY(-25%);
-    }
-
-    .pizza--vegan::before,
-    .pizza--baguette.pizza--vegan::before {
-      background-image: url("/public/logo-vegan.jpg");
-    }
-
-    .pizza--baguette::before,
-    .pizza--vegan.pizza--baguette::after {
-      background-image: url("/public/baguette.png");
-      // transform: rotate(25deg);
-      // background-size: 15px 15px;
-      // width: 15px;
-      // height: 15px;
-    }
-
-    .pizza--vegan.pizza--baguette::after {
-      left: -40px;
-    }
-
-    .pizza--special {
-      display: flex;
-      .colon {
-        font-weight: normal;
-        margin-right: 4px;
-      }
-      .highlight {
-        color: orange;
-      }
-      .pizza--special--ingredients {
-        width: 320px;
-        margin-top: 1px;
-      }
-    }
-    .pizza--special.pizza-mobile {
-      display: none;
-    }
+    font-weight: bold;
+    text-decoration: underline;
   }
-  .menu-line--separation {
-    border-top: 1px solid black; // or solid?
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 790px;
-    margin-bottom: 24px;
-  }
-  .menu-bottom {
-    max-width: 440px;
-    margin-left: auto;
-    margin-right: auto;
+  .choices {
     text-align: left;
-    .desc,
-    .products-desc {
-      font-size: 14px; // 14-16px?
+  }
+}
+.menu {
+  max-width: 850px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-radius: 800px;
+  background-color: #ffd099d1;
+  text-align: center;
+  > * {
+    margin-bottom: 32px;
+  }
+}
+.pizza-du-mois {
+  border: 1px solid black;
+  max-width: 545px;
+  padding: 8px 0;
+  line-height: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pizzas-list {
+  text-align: left;
+  margin-bottom: 24px;
+  padding-left: 124px;
+  .pizzas-list--category {
+    display: inline-block;
+    margin-bottom: 24px;
+    border-bottom: 1px solid black;
+    font-size: 18px;
+  }
+  .pizza {
+    line-height: 20px;
+    .pizza-name {
+      font-size: 16px;
     }
-    .desc {
-      margin-bottom: 24px;
+    .pizza-ingredients,
+    .pizza--special--ingredients {
+      color: rgb(105, 105, 105);
+      font-size: 14px;
+      // target par une couleur l'ingrédient qui change d'une pizza à une autre ?
+      // changer la couleur => plus claire ?
     }
+    .pizza-price {
+      font-size: 14px;
+      color: black;
+    }
+  }
+  .pizza--vegan,
+  .pizza--baguette {
+    position: relative;
+  }
+  .pizza--vegan::before,
+  .pizza--baguette::before,
+  .pizza--vegan.pizza--baguette:before,
+  .pizza--baguette.pizza--vegan::after {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    position: absolute;
+    top: 25%;
+    left: -25px;
+    transform: translateY(-25%);
+  }
+
+  .pizza--vegan::before,
+  .pizza--baguette.pizza--vegan::before {
+    background-image: url("/public/logo-vegan.jpg");
+  }
+
+  .pizza--baguette::before,
+  .pizza--vegan.pizza--baguette::after {
+    // background-image: url("/public/baguette-removebg-preview.png");
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .pizza--vegan.pizza--baguette::after {
+    left: -40px;
+  }
+
+  .pizza--special {
+    display: flex;
+    .colon {
+      font-weight: normal;
+      margin-right: 4px;
+    }
+    .highlight {
+      color: orange;
+    }
+    .pizza--special--ingredients {
+      width: 320px;
+      margin-top: 1px;
+    }
+  }
+  .pizza--special.pizza-mobile {
+    display: none;
+  }
+}
+.menu-line--separation {
+  border-top: 1px solid black; // or solid?
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 785px;
+  margin-bottom: 24px;
+}
+.menu-bottom {
+  max-width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  .desc,
+  .products-desc {
+    font-size: 14px; // 14-16px?
+  }
+  .desc {
+    margin-bottom: 24px;
   }
 }
 
 .drinks-desserts {
   background-color: rgb(173, 171, 171);
-  max-width: 500px;
+  border-radius: 4px;
+  max-width: 450px;
   padding: 24px;
   margin: 0 auto;
   .drinks-desserts--title {
-    text-align: center;
-    font-size: 18px;
+    width: 255px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 24px;
+    border-bottom: 1px solid black; // border-bottom or underline or nothing?
+  }
+  .logo-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    img {
+      border-radius: 100000px;
+    }
+    .category {
+      margin-left: 8px;
+      border-bottom: 1px solid black;
+    }
   }
   .drinks {
     margin-bottom: 24px;
   }
-  .category {
-    padding-left: 24px;
-    margin-bottom: 16px;
-    text-decoration: underline;
-  }
+
   .subcategory {
     margin-bottom: 12px;
+  }
+}
+
+.avis {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 48px;
+  background-color: violet;
+  .avis-title {
+    max-width: 225px;
+    border-bottom: 1px solid black;
+    margin-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .reviews {
+    .review {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 42px;
+      .review--content {
+        padding-top: 8px;
+      }
+      .review--name {
+        display: inline-block;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      .review--avatar {
+        width: 40px;
+        margin-right: 8px;
+      }
+      .review--date {
+        color: rgb(111, 106, 106);
+      }
+      .review--comment {
+        margin-bottom: 12px;
+      }
+    }
   }
 }
 
 @media (max-width: 768px) {
   main {
     .menu {
-      height: 1150px;
+      padding-bottom: 64px;
       .pizza-du-mois {
         padding: 12px 8px;
       }

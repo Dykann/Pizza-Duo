@@ -5,6 +5,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 a {
@@ -32,7 +33,7 @@ header {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: white;
+  background-color: gray;
   z-index: 1;
   position: -webkit-sticky;
   position: sticky;
@@ -45,8 +46,17 @@ header .logo {
   font-weight: normal;
 }
 
-header .logo span {
+header .logo .o-animation {
   color: orange;
+  font-size: 12px;
+  opacity: 0;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+header .logo .open {
+  opacity: 1;
+  font-size: 32px;
 }
 
 header .navbar {
@@ -61,6 +71,21 @@ header .navbar--item {
   margin-right: 12px;
 }
 
+.slideshow {
+  height: 75vh;
+  background-color: black;
+  position: relative;
+}
+
+.slideshow .slideshow-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
 main .formule-midi {
   text-align: center;
   max-width: 768px;
@@ -71,46 +96,39 @@ main .formule-midi {
 }
 
 main .formule-midi .heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   border: 1px solid black;
   max-width: 300px;
   margin: 0 auto;
   margin-bottom: 12px;
 }
 
-main .formule-midi .heading--title--price {
-  font-weight: bold;
+main .heading--title--price {
   font-size: 24px;
-  text-decoration: underline;
   margin-bottom: 24px;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-main .formule-midi .choices {
+main .choices {
   text-align: left;
 }
 
-main .menu {
+.menu {
   max-width: 850px;
-  min-height: 1000px;
   margin: 0 auto;
   margin-bottom: 16px;
   padding-top: 32px;
+  padding-bottom: 32px;
   border-radius: 800px;
   background-color: #ffd099d1;
   text-align: center;
 }
 
-main .menu > * {
+.menu > * {
   margin-bottom: 32px;
 }
 
-main .pizza-du-mois {
+.pizza-du-mois {
   border: 1px solid black;
   max-width: 545px;
   padding: 8px 0;
@@ -119,47 +137,47 @@ main .pizza-du-mois {
   margin-right: auto;
 }
 
-main .pizzas-list {
+.pizzas-list {
   text-align: left;
   margin-bottom: 24px;
   padding-left: 124px;
 }
 
-main .pizzas-list .pizzas-list--category {
+.pizzas-list .pizzas-list--category {
+  display: inline-block;
   margin-bottom: 24px;
+  border-bottom: 1px solid black;
   font-size: 18px;
-  text-decoration: underline;
 }
 
-main .pizzas-list .pizza {
+.pizzas-list .pizza {
   line-height: 20px;
 }
 
-main .pizzas-list .pizza .pizza-name {
+.pizzas-list .pizza .pizza-name {
   font-size: 16px;
 }
 
-main .pizzas-list .pizza .pizza-ingredients,
-main .pizzas-list .pizza .pizza--special--ingredients {
-  color: #a6a4a4;
+.pizzas-list .pizza .pizza-ingredients,
+.pizzas-list .pizza .pizza--special--ingredients {
+  color: dimgray;
   font-size: 14px;
 }
 
-main .pizzas-list .pizza .pizza-price {
+.pizzas-list .pizza .pizza-price {
   font-size: 14px;
   color: black;
-  font-weight: bold;
 }
 
-main .pizzas-list .pizza--vegan,
-main .pizzas-list .pizza--baguette {
+.pizzas-list .pizza--vegan,
+.pizzas-list .pizza--baguette {
   position: relative;
 }
 
-main .pizzas-list .pizza--vegan::before,
-main .pizzas-list .pizza--baguette::before,
-main .pizzas-list .pizza--vegan.pizza--baguette:before,
-main .pizzas-list .pizza--baguette.pizza--vegan::after {
+.pizzas-list .pizza--vegan::before,
+.pizzas-list .pizza--baguette::before,
+.pizzas-list .pizza--vegan.pizza--baguette:before,
+.pizzas-list .pizza--baguette.pizza--vegan::after {
   content: "";
   background-repeat: no-repeat;
   background-size: 15px 15px;
@@ -174,101 +192,168 @@ main .pizzas-list .pizza--baguette.pizza--vegan::after {
           transform: translateY(-25%);
 }
 
-main .pizzas-list .pizza--vegan::before,
-main .pizzas-list .pizza--baguette.pizza--vegan::before {
+.pizzas-list .pizza--vegan::before,
+.pizzas-list .pizza--baguette.pizza--vegan::before {
   background-image: url("/public/logo-vegan.jpg");
 }
 
-main .pizzas-list .pizza--baguette::before,
-main .pizzas-list .pizza--vegan.pizza--baguette::after {
-  background-image: url("/public/baguette.png");
+.pizzas-list .pizza--baguette::before,
+.pizzas-list .pizza--vegan.pizza--baguette::after {
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
 }
 
-main .pizzas-list .pizza--vegan.pizza--baguette::after {
+.pizzas-list .pizza--vegan.pizza--baguette::after {
   left: -40px;
 }
 
-main .pizzas-list .pizza--special {
+.pizzas-list .pizza--special {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .pizzas-list .pizza--special .colon {
+.pizzas-list .pizza--special .colon {
   font-weight: normal;
   margin-right: 4px;
 }
 
-main .pizzas-list .pizza--special .highlight {
+.pizzas-list .pizza--special .highlight {
   color: orange;
 }
 
-main .pizzas-list .pizza--special .pizza--special--ingredients {
+.pizzas-list .pizza--special .pizza--special--ingredients {
   width: 320px;
   margin-top: 1px;
 }
 
-main .pizzas-list .pizza--special.pizza-mobile {
+.pizzas-list .pizza--special.pizza-mobile {
   display: none;
 }
 
-main .menu-line--separation {
+.menu-line--separation {
   border-top: 1px solid black;
   border-left: none;
   border-right: none;
   border-bottom: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 790px;
+  max-width: 785px;
   margin-bottom: 24px;
 }
 
-main .menu-bottom {
-  max-width: 440px;
+.menu-bottom {
+  max-width: 430px;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
 }
 
-main .menu-bottom .desc,
-main .menu-bottom .products-desc {
+.menu-bottom .desc,
+.menu-bottom .products-desc {
   font-size: 14px;
 }
 
-main .menu-bottom .desc {
+.menu-bottom .desc {
   margin-bottom: 24px;
 }
 
 .drinks-desserts {
   background-color: #adabab;
-  max-width: 500px;
+  border-radius: 4px;
+  max-width: 450px;
   padding: 24px;
   margin: 0 auto;
 }
 
 .drinks-desserts .drinks-desserts--title {
-  text-align: center;
-  font-size: 18px;
+  width: 255px;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 24px;
+  border-bottom: 1px solid black;
+}
+
+.drinks-desserts .logo-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+}
+
+.drinks-desserts .logo-title img {
+  border-radius: 100000px;
+}
+
+.drinks-desserts .logo-title .category {
+  margin-left: 8px;
+  border-bottom: 1px solid black;
 }
 
 .drinks-desserts .drinks {
   margin-bottom: 24px;
 }
 
-.drinks-desserts .category {
-  padding-left: 24px;
-  margin-bottom: 16px;
-  text-decoration: underline;
+.drinks-desserts .subcategory {
+  margin-bottom: 12px;
 }
 
-.drinks-desserts .subcategory {
+.avis {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 48px;
+  background-color: violet;
+}
+
+.avis .avis-title {
+  max-width: 225px;
+  border-bottom: 1px solid black;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.avis .reviews .review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 42px;
+}
+
+.avis .reviews .review .review--content {
+  padding-top: 8px;
+}
+
+.avis .reviews .review .review--name {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.avis .reviews .review .review--avatar {
+  width: 40px;
+  margin-right: 8px;
+}
+
+.avis .reviews .review .review--date {
+  color: #6f6a6a;
+}
+
+.avis .reviews .review .review--comment {
   margin-bottom: 12px;
 }
 
 @media (max-width: 768px) {
   main .menu {
-    height: 1150px;
+    padding-bottom: 64px;
     border-radius: 128px;
   }
   main .menu .pizza-du-mois {
