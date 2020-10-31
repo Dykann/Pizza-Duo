@@ -13,7 +13,7 @@
 
 const slideshowImages = document.querySelectorAll(".slideshow-img");
 
-const SPEED = 5000;
+const SPEED = 4000;
 let currentImagePosition = 0;
 
 slideshowImages[currentImagePosition].style.opacity = 1;
@@ -29,18 +29,15 @@ function nextImage() {
 
 setInterval(nextImage, SPEED);
 
-const o = document.querySelector(".o-animation");
-// console.log(o);
+const headerO = document.querySelector(".o-animation");
 
 function oAnimation() {
-  o.classList.add("open");
+  headerO.classList.add("open");
 }
 
 window.addEventListener("load", oAnimation);
 
-const contentReplaced = document.querySelector(".navbar--item");
 const reviewsUl = document.querySelector(".reviews");
-console.log(reviewsUl);
 
 fetch("https://netflixvirus.vercel.app/api/pizzaduo/4")
   .then((res) => res.json())
@@ -58,7 +55,5 @@ fetch("https://netflixvirus.vercel.app/api/pizzaduo/4")
         </li>`;
       })
       .join("");
-    console.log(reviewsHTML);
-    console.log(data);
     reviewsUl.innerHTML = reviewsHTML;
   });
