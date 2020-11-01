@@ -13,7 +13,7 @@
 
 const slideshowImages = document.querySelectorAll(".slideshow-img");
 
-const SPEED = 4000;
+const SPEED = 1000;
 let currentImagePosition = 0;
 
 slideshowImages[currentImagePosition].style.opacity = 1;
@@ -39,7 +39,7 @@ window.addEventListener("load", oAnimation);
 
 const reviewsUl = document.querySelector(".reviews");
 
-fetch("https://netflixvirus.vercel.app/api/pizzaduo/4")
+fetch("https://netflixvirus.vercel.app/api/pizzaduo/5")
   .then((res) => res.json())
   .then((data) => {
     const reviewsHTML = data
