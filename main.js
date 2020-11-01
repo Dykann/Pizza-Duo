@@ -11,35 +11,49 @@
 //   return customer;
 // });
 
-// let currentIndexImage = 0;
-// const SPEED = 2000;
-// const carouselImages = [
-//   "public/showcase-pizza.jpg",
-//   "public/showcase-dough.jpg",
-//   "public/showcase-ingredients.jpg",
-// ];
+const slideshowImages = document.querySelectorAll(".slideshow-img");
 
-// function carousel() {
-//   document.img.src = carouselImages[currentIndexImage];
-//   if (currentIndexImage < carouselImages.length - 1) {
-//     currentIndexImage++;
-//   } else {
-//     currentIndexImage = 0;
-//   }
-//   setTimeout(function () {
-//     carousel();
-//   }, SPEED);
-// }
+const SPEED = 4000;
+let currentImagePosition = 0;
 
-// carousel();
+slideshowImages[currentImagePosition].style.opacity = 1;
 
-// const image = document.querySelector("img");
+function nextImage() {
+  slideshowImages[currentImagePosition].style.opacity = 0;
+  currentImagePosition = currentImagePosition + 1;
+  if (currentImagePosition === 3) {
+    currentImagePosition = 0;
+  }
+  slideshowImages[currentImagePosition].style.opacity = 1;
+}
 
-// window.addEventListener("load", isse);
+setInterval(nextImage, SPEED);
 
-// function isse() {
-//   image.classList.add("open");
-// }
+const headerO = document.querySelector(".o-animation");
 
-// const slideshow = document.querySelector(".carousel-images");
-// console.log(slideshow);
+function oAnimation() {
+  headerO.classList.add("open");
+}
+
+window.addEventListener("load", oAnimation);
+
+const reviewsUl = document.querySelector(".reviews");
+
+fetch("https://netflixvirus.vercel.app/api/pizzaduo/4")
+  .then((res) => res.json())
+  .then((data) => {
+    const reviewsHTML = data
+      .map((review) => {
+        const rate = review.review.slice(7, 8);
+        return `<li class="review">
+        <img class="review--avatar"src="${review.photoUrl}">
+        <div class="review--content">
+        <span class="review--name">${review.name}</span> 
+        <span class="review--rate">${rate}/5
+        </span><span class>${review.date}</span><p>${review.comment}</p>
+        </div>
+        </li>`;
+      })
+      .join("");
+    reviewsUl.innerHTML = reviewsHTML;
+  });

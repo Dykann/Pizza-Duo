@@ -10,24 +10,28 @@
   <body>
     <header>
       <h1 class="logo">
-        <a href="#">Pizza Du<span class="">o</span></a>
+        <a href="#">Pizza Du<span class="o-animation">o</span></a>
       </h1>
       <nav>
         <ul class="navbar">
-          <li class="navbar--item"><a href="#">La Carte</a></li>
-          <li class="navbar--item"><a href="#">Nous Trouver</a></li>
-          <li class="navbar--item"><a href="#">Avis</a></li>
+          <li class="navbar--item"><a href="#carte">La Carte</a></li>
+          <!-- <li class="navbar--item"><a href="#">Nous Trouver</a></li> -->
+          <li class="navbar--item"><a href="#avis">Avis</a></li>
         </ul>
       </nav>
     </header>
-    <figure class="carousel">
-      <!-- <img class="carousel-images" name="img" width="400" height="200" /> -->
+    <figure class="slideshow">
+      <img src="/public/showcase-pizza.jpeg"class="slideshow-img">
+      <img src="/public/showcase-dough.jpg"class="slideshow-img">
+      <img src="/public/showcase-ingredients.jpeg"class="slideshow-img">
     </figure>
     <main>
       <section class="formule-midi">
         <div class="heading">
-          <h1 class="heading--title">Formule midi</h1>
-          <h2 class="heading--pizza-baguette">La Pizza Baguette</h2>
+          <div class="title--pizza-baguette">
+            <h1 class="heading--title">Formule midi</h1>
+            <h2 class="heading--pizza-baguette">La Pizza Baguette</h2>
+          </div>
         </div>
         <img src="/public/pizza-baguette.png" alt="Pizza-Baguette" />
         <p class="heading--title--price">6,00€</p>
@@ -42,7 +46,7 @@
           </li>
         </ul>
       </section>
-      <section class="menu">
+      <section class="menu" id="carte">
         <div class="menu-heading">
           <h1 class="menu-heading--title">Carte Pizza Duo</h1>
           <h2 class="menu-heading--number">à emporter au : 01 30 44 13 14</h2>
@@ -231,62 +235,69 @@
         <hr class="menu-line--separation" />
         <div class="menu-bottom">
           <p class="desc">
-            Les légumes sont frais et grillés au four par nos soins. <br />
+            Les légumes sont frais et grillés au four par nos soins <br />
             Sauce tomate maison, préparation à froid (huile d'olive vierge
-            extra, basilic). <br />
-            Fromages, fournisseur Italien.
+            extra, basilic) <br />
+            Fromages, fournisseur Italien
           </p>
           <p class="products-desc">
-            <strong>*Pancetta</strong> / poitrine de porc roulée. <br />
-            <strong>*Coppa</strong> / saucisson italien. <br />
+            <strong>*Coppa</strong> / saucisson italien <br />
+            <strong>*Pancetta</strong> / poitrine de porc roulée <br />
+            <strong>*Speck</strong> / jambon cru fumé au bois de hêtre <br>
             <strong>*Provolone</strong> / fromage doux au parfum et goût
-            fumé.<br />
-            <strong>*Speck</strong> / jambon cru fumé au bois de hêtre.<br />
-            <strong>*Saucisse d'Italie</strong> / Saucisse fraîche d’Italie
-            égrenée façon viande hachée.
+            fumé<br />
+            <strong>*Saucisse d'Italie</strong> / saucisse fraîche
+            égrenée façon viande hachée
           </p>
         </div>
       </section>
       <section class="drinks-desserts">
         <h2 class="drinks-desserts--title">Carte des boissons et desserts</h3>
           <div class="drinks">
-          <h3 class="category drinks-title">Boissons</h3>
+            <div class="logo-title">
+              <img src="/public/drink.jpg"width="25"height="25" alt="drink-img">
+              <h3 class="category">Boissons</h3>
+            </div>
           <div class="subcategory">
-            <!-- <img src="" alt=""> logo boisson -->
-            <h4>Soda :</h4>
+            <h4>Soda</h4>
             <ul> 
-              <li>Coca, Cola light, Tropico exotique, canettes de 33cl <strong>2.00€</strong></li>
-              <li>Tropico exotique, bouteille de 1.5L <strong>3.00€</strong></li>
-              <li>Coca, bouteille de 1.5L <strong>3.00€</strong></li>
+              <li>Coca/Cola light/Tropico exotique, canettes 33cl <strong>2.00€</strong></li>
+              <li>Coca/Tropico exotique, bouteille  1.5L <strong>3.00€</strong></li>
             </div>
           </ul>
           <div class="subcategory">
-            <h4>Eau minérale :</h4>
+            <h4>Eau minérale</h4>
             <ul>
-              <li>Roche des écrins, bouteille de 50cl <strong>1.50€</strong></li>
-              <li>Roche des écrins, bouteilles de 1.5L <strong>2.00€</strong></li>
+              <li>Roche des écrins, bouteille 50cl <strong>1.50€</strong></li>
+              <li>Roche des écrins, bouteille 1.5L <strong>2.00€</strong></li>
             </ul>
           </div>
           <div class="subcategory">
-              <h4>Vins italiens :</h4>
+              <h4>Vins italiens</h4>
             <ul>
               <li>
-                Bardolino Rosé ou Rouge, bouteille de 75 cl <strong>9.50€</strong>
+                Bardolino Rosé ou Rouge, bouteille 75 cl <strong>9.50€</strong>
               </li>
             </ul>
           </div>
           </div>
-            <div class="desserts desserts-title">
-              <!-- <img src="" alt=""> logo dessert -->
-            <h3 class="category">Desserts</h3>
+            <div class="desserts">
+              <div class="logo-title">                
+                <img src="/public/dessert.jpg"width="25"height="25" alt="dessert-img">
+                <h3 class="category">Desserts</h3>
+              </div>
               <ul>
-                <li>Panna cotta, coulis fruits exotiques ou fruits rouge <strong>2.50€</strong></li>
+                <li>Panna cotta, coulis fruits exotiques/fruits rouges <strong>2.50€</strong></li>
                 <li>Tiramisu <strong>2.50€</strong></li>
                 <li>Muffin Chocolat <strong>2.50€</strong></li>
               </ul>
             </div>          
       </section>
     </main>
-    <footer></footer>
+    <section class="avis" id="avis">
+      <h1 class="avis-title">Nos avis sur Google</h1>
+      <ul class="reviews">
+      </ul>
+    </section>
   </body>
 </html>
