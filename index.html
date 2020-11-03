@@ -34,7 +34,7 @@
         </div>
         <img src="/public/pizza-baguette.png" alt="Pizza-Baguette" />
         <p class="heading--title--price">6,00€</p>
-        <ul class="choices">
+        <ul class="choices" id="carte">
           <li>
             <strong>LA PIZZA BAGUETTE / 6,00€</strong> : Régina, 4 Fromages,
             Calabraise, Végétarienne, Chèvre miel, Tonno, Parma
@@ -45,7 +45,8 @@
           </li>
         </ul>
       </section>
-      <section class="menu" id="carte">
+      <div class="container-menu">
+      <section class="menu">
         <div class="menu-heading">
           <h1 class="menu-heading--title">Carte Pizza Duo</h1>
           <h2 class="menu-heading--number">à emporter au : 01 30 44 13 14</h2>
@@ -79,7 +80,7 @@
             <strong class="pizza-price">12,50€</strong>
           </li>
 
-          <li class="pizza pizza--baguette">
+          <li class="pizza">
             <strong class="pizza-name">TONNO</strong> :
             <span class="pizza-ingredients">
               Tomate, Mozzarella, Thon, Oignons, Olives, Origan
@@ -95,7 +96,7 @@
             <strong class="pizza-price">14,50€</strong>
           </li>
 
-          <li class="pizza pizza--vegan pizza--baguette">
+          <li class="pizza pizza--vegan">
             <strong class="pizza-name">VEGETARIENNE</strong> :
             <span class="pizza-ingredients">
               Tomate, Mozzarella, Champignons, Aubergines*, Poivrons, Artichauts
@@ -103,7 +104,7 @@
             <strong class="pizza-price">14,00€</strong>
           </li>
 
-          <li class="pizza pizza--baguette">
+          <li class="pizza">
             <strong class="pizza-name">REGINA</strong> :
             <span class="pizza-ingredients">
               Tomate, Mozzarella, Champignons, Jambon blanc, Origan
@@ -128,7 +129,7 @@
             <strong class="pizza-price">13,50€</strong>
           </li>
 
-          <li class="pizza pizza--baguette">
+          <li class="pizza">
             <strong class="pizza-name">CALABRAISE</strong> :
             <span class="pizza-ingredients">
               Tomate, Mozzarella, Salami de calabre légèrement piquant
@@ -136,7 +137,7 @@
             <strong class="pizza-price">14,50€</strong>
           </li>
 
-          <li class="pizza pizza--vegan pizza--baguette">
+          <li class="pizza pizza--vegan">
             <strong class="pizza-name">4 FROMAGES</strong> :
             <span class="pizza-ingredients">
               Tomate, Mozzarella, Gorgonzola, Provolone fumé, Grana Padano
@@ -174,7 +175,7 @@
             <strong class="pizza-price">13,50€</strong>
           </li>
 
-          <li class="pizza pizza--baguette">
+          <li class="pizza">
             <strong class="pizza-name">PARMA</strong> :
             <span class="pizza-ingredients">
               Tomate, Mozzarella, Jambon de Parme
@@ -198,7 +199,7 @@
             <strong class="pizza-price">15,00€</strong>
           </li>
 
-          <li class="pizza pizza--vegan pizza--baguette">
+          <li class="pizza pizza--vegan">
             <strong class="pizza-name">CHEVRE MIEL</strong> :
             <span class="pizza-ingredients">
               Crème fraîche, Mozzarella, Chèvre, Miel, Tomates Cerises
@@ -219,17 +220,6 @@
             </span>
           </li>
 
-          <li class="pizza pizza--special pizza-mobile">
-            <strong class="pizza-name">
-              SPECIALE <span class="highlight">“PIZZA DUO”</span>
-              <span class="colon">:</span>
-            </strong>
-            <span class="pizza--special--ingredients">
-              Crème fraîche, Mozzarella au lait de bufflonne crémeuse et
-              onctueuse, Jambon de Parme, Origan
-            </span>
-            <strong class="pizza-price">16,00€</strong>
-          </li>
         </ul>
         <hr class="menu-line--separation" />
         <div class="menu-bottom">
@@ -292,6 +282,7 @@
               </ul>
             </div>          
       </section>
+    </div>
     </main>
     <section class="avis" id="avis">
       <h1 class="avis-title">Nos avis Google les plus récents</h1>

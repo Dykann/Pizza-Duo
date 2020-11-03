@@ -13,7 +13,7 @@
 
 const slideshowImages = document.querySelectorAll(".slideshow-img");
 
-const SPEED = 1000;
+const SPEED = 3000;
 let currentImagePosition = 0;
 
 slideshowImages[currentImagePosition].style.opacity = 1;
