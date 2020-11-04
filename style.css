@@ -121,7 +121,6 @@ main .formule-midi {
           align-items: center;
   text-align: center;
   margin-top: 12px;
-  margin-bottom: 12px;
   padding: 24px 24px;
   background-color: #fe7b7b;
 }
@@ -153,7 +152,7 @@ main .container-menu {
           justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 16px;
+  padding: 32px 0;
 }
 
 main .container-menu .menu {
@@ -291,7 +290,6 @@ main .container-menu .drinks-desserts {
       align-self: center;
   background-color: #6c71db;
   border-radius: 8px;
-  max-width: 450px;
   padding: 24px;
   margin-top: 16px;
 }
@@ -367,7 +365,7 @@ main .container-menu .drinks-desserts .subcategory {
 
 .avis .reviews .review .review--avatar {
   width: 40px;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 .avis .reviews .review .review--date {
@@ -381,6 +379,12 @@ main .container-menu .drinks-desserts .subcategory {
 @media (max-width: 1300px) {
   .slideshow .showcase-ingredients {
     background-size: cover;
+  }
+}
+
+@media (max-width: 1000px) {
+  .avis {
+    padding: 24px 32px;
   }
 }
 
@@ -458,14 +462,14 @@ main .container-menu .drinks-desserts .subcategory {
 }
 
 @media (max-width: 500px) {
-  main .menu .pizza-du-mois {
+  main .container-menu .menu .pizza-du-mois {
     width: 350px;
   }
-  main .menu .menu-bottom {
+  main .container-menu .menu .menu-bottom {
     width: 330px;
   }
   .avis {
-    padding: 16px 12px;
+    font-size: 14px;
   }
 }
 
@@ -482,6 +486,18 @@ main .container-menu .drinks-desserts .subcategory {
   }
   main .container-menu .menu .pizzas-list {
     padding-left: 36px;
+  }
+  main .container-menu .drinks-desserts {
+    padding: 16px;
+  }
+  .avis {
+    padding: 16px 12px;
+  }
+  .avis .avis-title {
+    margin-bottom: 42px;
+  }
+  .avis .reviews .review {
+    margin-bottom: 32px;
   }
 }
 
