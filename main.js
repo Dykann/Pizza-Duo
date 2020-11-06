@@ -13,7 +13,7 @@
 
 const slideshowImages = document.querySelectorAll(".slideshow-img");
 
-const SPEED = 3000;
+const SPEED = 6000;
 let currentImagePosition = 0;
 
 slideshowImages[currentImagePosition].style.opacity = 1;
@@ -29,17 +29,9 @@ function nextImage() {
 
 setInterval(nextImage, SPEED);
 
-const headerO = document.querySelector(".o-animation");
-
-function oAnimation() {
-  headerO.classList.add("open");
-}
-
-window.addEventListener("load", oAnimation);
-
 const reviewsUl = document.querySelector(".reviews");
 
-fetch("https://netflixvirus.vercel.app/api/pizzaduo/5")
+fetch("https://netflixvirus.vercel.app/api/pizzaduo/3")
   .then((res) => res.json())
   .then((data) => {
     const reviewsHTML = data
@@ -50,7 +42,7 @@ fetch("https://netflixvirus.vercel.app/api/pizzaduo/5")
         <div class="review--content">
         <span class="review--name">${review.name}</span> 
         <span class="review--rate">${rate}/5
-        </span><span class>${review.date}</span><p>${review.comment}</p>
+        </span><span class="review--date">${review.date}</span><p class="review--comment">${review.comment}</p>
         </div>
         </li>`;
       })

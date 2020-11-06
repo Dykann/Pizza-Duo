@@ -43,15 +43,8 @@ header {
   font-weight: bold;
   box-shadow: 0 2px 10px #00000026;
   .logo {
-    .o-animation {
+    .orange {
       color: orange;
-      font-size: 12px;
-      opacity: 0;
-      transition: all 2s;
-    }
-    .open {
-      opacity: 1;
-      font-size: 32px;
     }
   }
   .navbar {
@@ -65,7 +58,7 @@ header {
 }
 
 .slideshow {
-  height: 648px;
+  height: 85vh;
   background-color: black;
   position: relative;
 
@@ -92,184 +85,187 @@ header {
   }
 }
 
-main {
-  .formule-midi {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.formule-midi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 24px;
+  padding-top: 36px;
+  background-color: #fe7b7b;
+  .heading {
+    border: 1px solid black;
+    padding: 12px 48px;
+    margin: 0 auto;
+    margin-bottom: 12px;
+  }
+  .heading--title--price {
+    font-size: 24px;
+    margin-bottom: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .choices {
+    text-align: left;
+  }
+}
+
+.container-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 16px 0;
+  background-color: orange;
+  .menu {
+    max-width: 850px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-right: 32px;
+    border-radius: 800px;
+    background-color: #fecb91;
     text-align: center;
-    margin-top: 12px;
-    padding: 24px 24px;
-    background-color: #fe7b7b;
-    .heading {
-      border: 1px solid black;
-      padding: 12px 48px;
-      margin: 0 auto;
-      margin-bottom: 12px;
-    }
-    .heading--title--price {
-      font-size: 24px;
-      margin-bottom: 24px;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-    .choices {
-      text-align: left;
+    > * {
+      margin-bottom: 32px;
     }
   }
+  .pizza-du-mois {
+    border: 1px solid black;
+    max-width: 525px;
+    padding: 8px 0;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-  .container-menu {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 32px 0;
-    .menu {
-      max-width: 850px;
-      padding-top: 32px;
-      padding-right: 12px;
-      padding-bottom: 32px;
-      border-radius: 800px;
-      background-color: #fecb91;
-      text-align: center;
-      > * {
-        margin-bottom: 32px;
+  .pizzas-list {
+    text-align: left;
+    margin-bottom: 16px;
+    padding-left: 108px;
+    padding-right: 12px;
+    .pizzas-list--category {
+      display: inline-block;
+      margin-bottom: 24px;
+      border-bottom: 1px solid black;
+      font-size: 18px;
+    }
+    .pizza {
+      line-height: 20px;
+      .pizza-name {
+        font-size: 16px;
+      }
+      .pizza-ingredients,
+      .pizza--special--ingredients {
+        color: black;
+        font-size: 14px;
+      }
+      .pizza-price {
+        font-size: 14px;
+        color: black;
       }
     }
-    .pizza-du-mois {
-      border: 1px solid black;
-      max-width: 545px;
-      padding: 8px 0;
-      line-height: 24px;
-      margin-left: auto;
-      margin-right: auto;
+    .pizza--vegan {
+      position: relative;
+    }
+    .pizza--vegan::before {
+      content: "";
+      background-image: url("/public/logo-vegan.jpg");
+      background-repeat: no-repeat;
+      background-size: 15px 15px;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 100px;
+      position: absolute;
+      top: 15%;
+      left: -25px;
     }
 
-    .pizzas-list {
-      text-align: left;
+    .pizza--special {
+      display: flex;
+      .colon {
+        font-weight: normal;
+        margin-right: 4px;
+      }
+      .highlight {
+        color: rgb(255, 173, 20);
+      }
+      .pizza--special--ingredients {
+        width: 365px;
+        margin-top: 1px;
+      }
+    }
+    .pizza--special.pizza-mobile {
+      display: none;
+    }
+  }
+  .menu-line--separation {
+    border-top: 1px solid #3d3d3d;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 712px;
+    margin-bottom: 16px;
+  }
+  .menu-bottom {
+    max-width: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    .desc,
+    .products-desc {
+      font-size: 12px;
+    }
+    .desc {
+      margin-bottom: 12px;
+    }
+  }
+  .drinks-desserts {
+    z-index: 10;
+    position: sticky;
+    top: 10%;
+    align-self: center;
+    background-color: rgb(108, 113, 219);
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: 16px;
+    .drinks-desserts--title {
+      width: 291px;
+      font-size: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px;
+      border-bottom: 1px solid black;
+    }
+    .logo-title {
+      display: flex;
+      align-items: center;
       margin-bottom: 16px;
-      padding-left: 124px;
-      .pizzas-list--category {
-        display: inline-block;
-        margin-bottom: 24px;
-        border-bottom: 1px solid black;
-        font-size: 18px;
+      img {
+        border-radius: 100000px;
       }
-      .pizza {
-        line-height: 20px;
-        .pizza-name {
-          font-size: 16px;
-        }
-        .pizza-ingredients,
-        .pizza--special--ingredients {
-          color: black;
-          font-weight: lighter;
-          font-size: 14px;
-        }
-        .pizza-price {
-          font-size: 14px;
-          color: black;
-        }
-      }
-      .pizza--vegan {
-        position: relative;
-      }
-      .pizza--vegan::before {
-        content: "";
-        background-image: url("/public/logo-vegan.jpg");
-        background-repeat: no-repeat;
-        background-size: 15px 15px;
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        border-radius: 100px;
-        position: absolute;
-        top: 15%;
-        left: -25px;
-      }
-
-      .pizza--special {
-        display: flex;
-        .colon {
-          font-weight: normal;
-          margin-right: 4px;
-        }
-        .highlight {
-          color: rgb(255, 173, 20);
-        }
-        .pizza--special--ingredients {
-          width: 365px;
-          margin-top: 1px;
-        }
-      }
-      .pizza--special.pizza-mobile {
-        display: none;
-      }
-    }
-    .menu-line--separation {
-      border-top: 1px solid #3d3d3d;
-      border-left: none;
-      border-right: none;
-      border-bottom: none;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 740px;
-      margin-bottom: 16px;
-    }
-    .menu-bottom {
-      max-width: 430px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left;
-      .desc,
-      .products-desc {
-        font-size: 12px;
-      }
-      .desc {
-        margin-bottom: 12px;
-      }
-    }
-    .drinks-desserts {
-      z-index: 10;
-      position: sticky;
-      top: 10%;
-      align-self: center;
-      background-color: rgb(108, 113, 219);
-      border-radius: 8px;
-      padding: 24px;
-      margin-top: 16px;
-      .drinks-desserts--title {
-        width: 291px;
-        font-size: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 24px;
+      .category {
+        margin-left: 8px;
         border-bottom: 1px solid black;
       }
-      .logo-title {
-        display: flex;
-        align-items: center;
-        margin-bottom: 16px;
-        img {
-          border-radius: 100000px;
-        }
-        .category {
-          margin-left: 8px;
-          border-bottom: 1px solid black;
-        }
-      }
-      .drinks {
-        margin-bottom: 32px;
-      }
+    }
+    .drinks {
+      margin-bottom: 32px;
+    }
 
-      .subcategory {
-        margin-bottom: 12px;
-      }
+    .subcategory {
+      margin-bottom: 12px;
     }
   }
 }
 
 .avis {
-  padding: 24px 192px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+  padding: 32px;
+  padding-bottom: 24px;
   background-color: rgb(231, 128, 231);
   .avis-title {
     text-align: center;
@@ -279,43 +275,54 @@ main {
     margin-right: auto;
   }
   .reviews {
+    display: flex;
+    flex-direction: column;
     .review {
       display: flex;
       align-items: flex-start;
-      margin-bottom: 42px;
       .review--content {
         padding-top: 8px;
       }
       .review--name {
         display: inline-block;
         font-weight: bold;
-        margin-bottom: 8px;
+        margin-bottom: 12px;
       }
       .review--avatar {
         width: 40px;
         margin-right: 4px;
       }
       .review--date {
-        color: rgb(111, 106, 106);
       }
       .review--comment {
-        margin-bottom: 12px;
+        margin-bottom: 32px;
       }
     }
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1277px) {
   .slideshow {
     .showcase-ingredients {
       background-size: cover;
     }
   }
+  .container-menu {
+    flex-direction: column;
+    align-items: center;
+    .menu {
+      margin-right: 0;
+    }
+  }
 }
 
-@media (max-width: 1000px) {
-  .avis {
-    padding: 24px 32px;
+@media (max-width: 805px) {
+  .container-menu {
+    .menu {
+      .menu-line--separation {
+        max-width: 690px;
+      }
+    }
   }
 }
 
@@ -323,9 +330,8 @@ main {
   .slideshow {
     height: 500px;
   }
-  main {
+  .container-menu {
     .menu {
-      padding-bottom: 64px;
       .pizza-du-mois {
         padding: 12px 8px;
       }
@@ -339,6 +345,9 @@ main {
           text-align: left;
         }
       }
+      .menu-line--separation {
+        max-width: 645px;
+      }
       .menu-bottom {
         margin-left: 164px;
       }
@@ -347,7 +356,7 @@ main {
 }
 
 @media (max-width: 700px) {
-  main {
+  .container-menu {
     .menu {
       .pizzas-list {
         padding-left: 50px;
@@ -381,6 +390,9 @@ main {
           margin: 0;
         }
       }
+      .menu-line--separation {
+        max-width: 100%;
+      }
       .menu-bottom {
         margin-left: auto;
         margin-bottom: 76px;
@@ -399,70 +411,79 @@ main {
       background-size: 100% 100%;
     }
   }
+  .container-menu {
+    .menu {
+    }
+  }
 }
 
-@media (max-width: 500px) {
-  main {
-    .container-menu {
-      .menu {
-        .pizza-du-mois {
-          width: 350px;
-        }
-        .menu-bottom {
-          width: 330px;
-        }
+@media (max-width: 520px) {
+  .container-menu {
+    .menu {
+      .menu-bottom {
+        width: 335px;
       }
     }
   }
-  .avis {
-    font-size: 14px;
+}
+
+@media (max-width: 500px) {
+  .container-menu {
+    .menu {
+      padding-right: 0;
+      .pizza-du-mois {
+        width: 350px;
+      }
+    }
   }
 }
 
 @media (max-width: 390px) {
-  main {
-    .container-menu {
-      .menu {
-        .menu-heading {
-          padding-top: 8px;
-          .menu-heading--title,
-          .menu-heading--number {
-            font-size: 18px;
-          }
-        }
-        .pizza-du-mois {
-          width: 290px;
-        }
-        .pizzas-list {
-          padding-left: 36px;
+  .container-menu {
+    .menu {
+      .menu-heading {
+        padding-top: 8px;
+        .menu-heading--title,
+        .menu-heading--number {
+          font-size: 18px;
         }
       }
-      .drinks-desserts {
-        padding: 16px;
+      .pizza-du-mois {
+        width: 290px;
       }
+      .pizzas-list {
+        padding-left: 36px;
+      }
+    }
+    .drinks-desserts {
+      width: 100%;
+      padding: 16px;
     }
   }
   .avis {
-    padding: 16px 12px;
-    .avis-title {
-      margin-bottom: 42px;
-    }
+    padding-left: 8px;
+    padding-right: 12px;
     .reviews {
-      .review {
-        margin-bottom: 32px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 365px) {
+  .container-menu {
+    .menu {
+      .menu-bottom {
+        width: 300px;
       }
     }
   }
 }
 
-@media (max-width: 355px) {
-  main {
-    .container-menu {
-      .menu {
-        .menu-bottom {
-          width: 300px;
-          margin-left: 12px;
-        }
+@media (max-width: 325px) {
+  .container-menu {
+    .menu {
+      .menu-bottom {
+        margin-left: 16px;
       }
     }
   }
