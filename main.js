@@ -31,7 +31,7 @@ setInterval(nextImage, SPEED);
 
 const reviewsUl = document.querySelector(".reviews");
 
-fetch("https://netflixvirus.vercel.app/api/pizzaduo/3")
+fetch("https://netflixvirus.vercel.app/api/pizzaduo/4")
   .then((res) => res.json())
   .then((data) => {
     const reviewsHTML = data

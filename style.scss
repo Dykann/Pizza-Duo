@@ -91,8 +91,7 @@ header {
   align-items: center;
   text-align: center;
   padding: 24px 24px;
-  padding-top: 36px;
-  background-color: #fe7b7b;
+  background-color: #ff4545;
   .heading {
     border: 1px solid black;
     padding: 12px 48px;
@@ -115,14 +114,13 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   padding: 16px 0;
-  background-color: orange;
   .menu {
     max-width: 850px;
     padding-top: 32px;
     padding-bottom: 32px;
     margin-right: 32px;
     border-radius: 800px;
-    background-color: #fecb91;
+    background-color: #ffbb6d;
     text-align: center;
     > * {
       margin-bottom: 32px;
@@ -187,7 +185,7 @@ header {
         margin-right: 4px;
       }
       .highlight {
-        color: rgb(255, 173, 20);
+        color: #3d3d3d;
       }
       .pizza--special--ingredients {
         width: 365px;
@@ -205,7 +203,7 @@ header {
     border-bottom: none;
     margin-left: auto;
     margin-right: auto;
-    max-width: 712px;
+    max-width: 100%;
     margin-bottom: 16px;
   }
   .menu-bottom {
@@ -226,8 +224,8 @@ header {
     position: sticky;
     top: 10%;
     align-self: center;
-    background-color: rgb(108, 113, 219);
-    border-radius: 8px;
+    background-color: #9ab4ff;
+    border-radius: 4px;
     padding: 24px;
     margin-top: 16px;
     .drinks-desserts--title {
@@ -261,25 +259,30 @@ header {
 }
 
 .avis {
-  margin-left: auto;
-  margin-right: auto;
   max-width: 960px;
   padding: 32px;
-  padding-bottom: 24px;
-  background-color: rgb(231, 128, 231);
+  padding-top: 78px;
+  margin-left: auto;
+  margin-right: auto;
   .avis-title {
     text-align: center;
-    border-bottom: 1px solid black;
+    max-width: 265px;
+    border-bottom: 1px solid rgb(255, 209, 124);
     margin-bottom: 48px;
     margin-left: auto;
     margin-right: auto;
+    color: rgb(255, 209, 124);
   }
   .reviews {
     display: flex;
     flex-direction: column;
+
     .review {
       display: flex;
-      align-items: flex-start;
+      padding: 0 12px;
+      padding-top: 4px;
+      margin-bottom: 12px;
+      background-color: white;
       .review--content {
         padding-top: 8px;
       }
@@ -289,13 +292,14 @@ header {
         margin-bottom: 12px;
       }
       .review--avatar {
-        width: 40px;
-        margin-right: 4px;
+        align-self: flex-start;
+        width: 35px;
+        margin-right: 6px;
       }
       .review--date {
       }
       .review--comment {
-        margin-bottom: 32px;
+        padding-bottom: 24px;
       }
     }
   }
@@ -312,16 +316,6 @@ header {
     align-items: center;
     .menu {
       margin-right: 0;
-    }
-  }
-}
-
-@media (max-width: 805px) {
-  .container-menu {
-    .menu {
-      .menu-line--separation {
-        max-width: 690px;
-      }
     }
   }
 }
@@ -345,9 +339,7 @@ header {
           text-align: left;
         }
       }
-      .menu-line--separation {
-        max-width: 645px;
-      }
+
       .menu-bottom {
         margin-left: 164px;
       }
@@ -390,9 +382,7 @@ header {
           margin: 0;
         }
       }
-      .menu-line--separation {
-        max-width: 100%;
-      }
+
       .menu-bottom {
         margin-left: auto;
         margin-bottom: 76px;
@@ -401,18 +391,6 @@ header {
           font-size: 13px;
         }
       }
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .slideshow {
-    .showcase-ingredients {
-      background-size: 100% 100%;
-    }
-  }
-  .container-menu {
-    .menu {
     }
   }
 }
@@ -435,6 +413,19 @@ header {
         width: 350px;
       }
     }
+    .drinks-desserts {
+      width: 100%;
+      padding: 16px;
+    }
+  }
+  .avis {
+    padding: 0;
+    padding-top: 40px;
+    .reviews {
+      .review {
+        font-size: 14px;
+      }
+    }
   }
 }
 
@@ -454,17 +445,6 @@ header {
       .pizzas-list {
         padding-left: 36px;
       }
-    }
-    .drinks-desserts {
-      width: 100%;
-      padding: 16px;
-    }
-  }
-  .avis {
-    padding-left: 8px;
-    padding-right: 12px;
-    .reviews {
-      font-size: 14px;
     }
   }
 }
