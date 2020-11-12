@@ -434,7 +434,11 @@ header .navbar--item {
 
 @media (max-width: 795px) {
   .avis {
-    margin-top: 16px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+  .avis .avis-title {
+    margin-bottom: 36px;
   }
 }
 
@@ -539,7 +543,7 @@ header .navbar--item {
   .avis {
     margin-top: 0;
     margin-bottom: 16px;
-    padding-top: 16px;
+    padding-top: 10px;
   }
   .avis .avis-title {
     margin-bottom: 24px;
