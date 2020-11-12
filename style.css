@@ -539,6 +539,10 @@ header .navbar--item {
   .avis {
     margin-top: 0;
     margin-bottom: 16px;
+    padding-top: 16px;
+  }
+  .avis .avis-title {
+    margin-bottom: 24px;
   }
   .avis .reviews .review {
     font-size: 14px;
