@@ -387,7 +387,7 @@ header .navbar--item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: orange;
+  color: white;
   height: 50px;
   background-color: #3d3d3d;
   -webkit-box-shadow: 0 2px 10px #0000007f;
@@ -541,9 +541,7 @@ header .navbar--item {
     padding: 16px;
   }
   .avis {
-    margin-top: 0;
-    margin-bottom: 16px;
-    padding-top: 10px;
+    margin-bottom: 24px;
   }
   .avis .avis-title {
     margin-bottom: 24px;
