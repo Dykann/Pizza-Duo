@@ -311,17 +311,36 @@ header {
 
 .footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   color: white;
   height: 50px;
   background-color: $grey;
   box-shadow: 0 2px 10px #0000007f;
-  .footer-number {
-    margin-left: 410px;
+  .footer-number,
+  .footer-address {
+    position: relative;
   }
-  .footer-number--resp {
-    display: none;
+  .footer-address::before,
+  .footer-number::before {
+    content: "";
+    background-image: url("/public/location.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -100%;
+    left: -16%;
+  }
+  .footer-number::before {
+    background-image: url("/public/number.png");
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    top: -70%;
+    left: -40%;
   }
 }
 
@@ -336,16 +355,6 @@ header {
     align-items: center;
     .menu {
       margin-right: 0;
-    }
-  }
-}
-
-@media (max-width: 965px) {
-  .footer {
-    justify-content: space-between;
-    padding: 0 12px;
-    .footer-number {
-      margin-left: 0;
     }
   }
 }
@@ -433,22 +442,11 @@ header {
       }
     }
   }
-}
-
-@media (max-width: 650px) {
   .footer {
-    padding-top: 8px;
-    padding-bottom: 12px;
-    .footer-address {
-      max-width: 210px;
-    }
-    .footer-number--resp {
-      max-width: 170px;
-      display: block;
-    }
-    .footer-number {
-      display: none;
-    }
+    justify-content: space-between;
+    padding: 0;
+    padding-left: 36px;
+    padding-right: 12px;
   }
 }
 
@@ -458,6 +456,15 @@ header {
       .menu-bottom {
         width: 335px;
       }
+    }
+  }
+  .footer {
+    .footer-address {
+      width: 200px;
+    }
+    .footer-address::before {
+      top: -20%;
+      left: -20%;
     }
   }
 }
@@ -509,15 +516,7 @@ header {
     }
   }
   .footer {
-    height: 60px;
-    padding: 0 8px;
-    .footer-address {
-      width: 165px;
-    }
-
-    .footer-number--resp {
-      width: 160px;
-    }
+    font-size: 15px;
   }
 }
 
@@ -529,11 +528,24 @@ header {
       }
     }
   }
+}
+
+@media (max-width: 355px) {
   .footer {
-    font-size: 14px;
-    .footer-address,
-    .footer-number--resp {
-      width: 140px;
+    padding: 0;
+    padding-left: 8px;
+    padding-right: 12px;
+    .footer-address::before {
+      background-size: 40px 40px;
+      width: 40px;
+      height: 40px;
+      top: -10%;
+    }
+    .footer-number:before {
+      background-size: 35px 35px;
+      width: 35px;
+      height: 35px;
+      left: -35%;
     }
   }
 }
