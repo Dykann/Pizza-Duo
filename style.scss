@@ -9,7 +9,6 @@
 }
 
 $grey: #3d3d3d;
-$red: #ff4545;
 $orange: #ffbb6d;
 $blue: #9ab4ff;
 $yellow: #ffd17c;
@@ -96,7 +95,7 @@ header {
   align-items: center;
   text-align: center;
   padding: 24px;
-  background-color: $red;
+  background-color: rgb(56, 145, 72);
   .heading {
     border: 1px solid black;
     padding: 12px 48px;
@@ -191,7 +190,7 @@ header {
         margin-right: 4px;
       }
       .highlight {
-        color: rgb(224, 30, 136);
+        color: orangered;
       }
       .pizza--special--ingredients {
         width: 365px;
@@ -317,6 +316,7 @@ header {
   height: 50px;
   background-color: $grey;
   box-shadow: 0 2px 10px #0000007f;
+  padding-left: 8px;
   .footer-number,
   .footer-address {
     position: relative;
@@ -327,20 +327,20 @@ header {
     background-image: url("/public/location.png");
     background-repeat: no-repeat;
     display: inline-block;
-    background-size: 50px 50px;
-    width: 50px;
-    height: 50px;
+    background-size: 35px 35px;
+    width: 35px;
+    height: 35px;
     position: absolute;
-    top: -100%;
-    left: -16%;
+    top: -50%;
+    left: -14%;
   }
   .footer-number::before {
     background-image: url("/public/number.png");
-    background-size: 40px 40px;
-    width: 40px;
-    height: 40px;
-    top: -70%;
-    left: -40%;
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+    top: -40%;
+    left: -35%;
   }
 }
 
@@ -388,7 +388,6 @@ header {
           text-align: left;
         }
       }
-
       .menu-bottom {
         margin-left: 164px;
       }
@@ -444,8 +443,7 @@ header {
   }
   .footer {
     justify-content: space-between;
-    padding: 0;
-    padding-left: 36px;
+    padding-left: 42px;
     padding-right: 12px;
   }
 }
@@ -460,11 +458,11 @@ header {
   }
   .footer {
     .footer-address {
-      width: 200px;
+      width: 165px;
     }
     .footer-address::before {
-      top: -20%;
-      left: -20%;
+      top: -5%;
+      left: -22%;
     }
   }
 }
@@ -528,24 +526,23 @@ header {
       }
     }
   }
-}
-
-@media (max-width: 355px) {
   .footer {
-    padding: 0;
-    padding-left: 8px;
-    padding-right: 12px;
+    font-size: 14px;
+    padding-left: 28px;
+    padding-right: 8px;
     .footer-address::before {
-      background-size: 40px 40px;
-      width: 40px;
-      height: 40px;
-      top: -10%;
+      background-size: 30px 30px;
+      width: 30px;
+      height: 30px;
+      top: 0%;
+      left: -17%;
     }
-    .footer-number:before {
-      background-size: 35px 35px;
-      width: 35px;
-      height: 35px;
-      left: -35%;
+    .footer-number::before {
+      background-size: 25px 25px;
+      width: 25px;
+      height: 25px;
+      top: -30%;
+      left: -31%;
     }
   }
 }
