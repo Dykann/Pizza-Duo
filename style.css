@@ -440,6 +440,16 @@ header .navbar--item {
   }
 }
 
+@media (max-width: 960px) {
+  .footer {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 36px;
+    padding-right: 12px;
+  }
+}
+
 @media (max-width: 795px) {
   .avis {
     margin-top: 8px;
@@ -511,13 +521,6 @@ header .navbar--item {
   .container-menu .menu .menu-bottom .desc,
   .container-menu .menu .menu-bottom .products-desc {
     font-size: 13px;
-  }
-  .footer {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding-left: 42px;
-    padding-right: 12px;
   }
 }
 
