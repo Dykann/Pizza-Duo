@@ -39,3 +39,13 @@ function getGoogleReviews(max = 4) {
 }
 
 getGoogleReviews(4);
+
+const bannerCovid = document.querySelector(".banner-covid");
+const bannerCovidResp = document.querySelector(".banner-resp");
+
+function bannerAnimation() {
+  bannerCovid.classList.add("open");
+  bannerCovidResp.classList.add("open-resp");
+}
+
+window.addEventListener("load", bannerAnimation);
