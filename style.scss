@@ -43,6 +43,10 @@ ul {
   display: none;
 }
 
+.link-avis {
+  display: none;
+}
+
 body {
   background-color: $grey;
 }
@@ -462,7 +466,6 @@ header {
           left: -30px;
         }
       }
-
       .pizza--special.pizza-desktop {
         display: block;
         .colon {
@@ -476,6 +479,14 @@ header {
         .products-desc {
           font-size: 13px;
         }
+      }
+    }
+    .desserts {
+      .dessert-muffin {
+        display: none;
+      }
+      .link-avis {
+        display: block;
       }
     }
   }

@@ -38,6 +38,10 @@ ul {
   display: none;
 }
 
+.link-avis {
+  display: none;
+}
+
 body {
   background-color: #3d3d3d;
 }
@@ -559,6 +563,12 @@ header .header .navbar--item {
   .container-menu .menu .menu-bottom .desc,
   .container-menu .menu .menu-bottom .products-desc {
     font-size: 13px;
+  }
+  .container-menu .desserts .dessert-muffin {
+    display: none;
+  }
+  .container-menu .desserts .link-avis {
+    display: block;
   }
 }
 

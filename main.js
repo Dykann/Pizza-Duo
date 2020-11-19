@@ -49,3 +49,23 @@ function bannerAnimation() {
 }
 
 window.addEventListener("load", bannerAnimation);
+
+const linkAvis = document.querySelector(".link-avis");
+
+function replaceId() {
+  if (window.innerWidth <= 700) {
+    linkAvis.id = "avis";
+  }
+}
+
+replaceId();
+
+function removeId() {
+  if (window.innerWidth >= 700) {
+    linkAvis.removeAttribute("id");
+  }
+}
+
+removeId();
+
+window.addEventListener("resize", removeId);
