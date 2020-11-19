@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +10,7 @@
   </head>
   <body>
     <header>
+      <div class="header">
       <h1 class="logo">
         <a href="#">Pizza Du<span class="orange">o</span></a>
       </h1>
@@ -16,15 +18,18 @@
         <ul class="navbar">
           <li class="navbar--item"><a href="#carte">La Carte</a></li>
           <li class="navbar--item"><a href="#avis">Nos Avis</a></li>
+        </div>
         </ul>
       </nav>
+    <div class="banner-covid">Pizza Duo reste ouvert pendant le confinement du mardi au vendredi : de 12h00 à 14h00 ainsi que de 18h30 à 21h00 et le samedi (uniquement le soir)</div>
     </header>
     <figure class="slideshow">
       <div style="opacity:1;"class="slideshow-img showcase-pizza"> </div>
       <div style="opacity:0;"class="slideshow-img showcase-dough"> </div>
       <div style="opacity:0;"class="slideshow-img showcase-ingredients"> </div>
     </figure>
-      <section class="formule-midi">
+    <div class="banner-covid banner-resp">Pizza Duo reste ouvert pendant le confinement du mardi au vendredi : de 12h00 à 14h00 ainsi que de 18h30 à 21h00 et le samedi (uniquement le soir)</div>
+    <section class="formule-midi">
         <div class="heading">
           <div class="title--pizza-baguette">
             <h1 class="heading--title">Formule midi</h1>
@@ -277,20 +282,26 @@
               <ul>
                 <li>Panna cotta, coulis fruits exotiques/fruits rouges <strong>2.50€</strong></li>
                 <li>Tiramisu <strong>2.50€</strong></li>
-                <li>Muffin Chocolat <strong>2.50€</strong></li>
+                <li class="dessert-muffin">Muffin Chocolat <strong>2.50€</strong></li>
+                <li class="link-avis">Muffin Chocolat <strong>2.50€</strong></li>
               </ul>
             </div>          
           </section>
         </div>
       </main>
-      <p id="avis"></p>
-    <section class="avis">
+    <section class="avis" id="avis">
       <h1 class="avis-title" >Ils ont adoré nos pizzas</h1>
       <ul class="reviews"></ul>
     </section>
     <footer class="footer">
-      <span class="footer-address">2 bisplace Saint Pierre 78370 à Plaisir </span>
-        <span class="footer-number">01 30 44 13 14</span>
+      <div class="footer-address">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" class="svg-inline--fa fa-map-marker-alt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
+        <span>2 bisplace Saint Pierre 78370 à Plaisir</span>
+      </div>
+      <div class="footer-number">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" class="svg-inline--fa fa-phone fa-w-16 phone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>
+        <span>01 30 44 13 14</span>
+      </div>
     </footer>
   </body>
 </html>

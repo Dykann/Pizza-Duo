@@ -1,3 +1,16 @@
+// const divReviews = [...document.querySelectorAll(".jxjCjc")];
+
+// divReviews.map((element) => {
+//   const customer = {
+//     name: element.querySelector("a[href]").textContent,
+//     comment: element.querySelector("span[jscontroller=P7L8k]").textContent,
+//     review: element.querySelector(".Fam1ne").getAttribute("aria-label"),
+//     date: element.querySelector(".dehysf").textContent,
+//     photoUrl: element.parentNode.querySelector("img").src,
+//   };
+//   return customer;
+// });
+
 const slideshowImages = document.querySelectorAll(".slideshow-img");
 
 const SPEED = 6000;
@@ -39,3 +52,33 @@ function getGoogleReviews(max = 4) {
 }
 
 getGoogleReviews(4);
+
+const bannerCovid = document.querySelector(".banner-covid");
+const bannerCovidResp = document.querySelector(".banner-resp");
+
+function bannerAnimation() {
+  bannerCovid.classList.add("open");
+  bannerCovidResp.classList.add("open-resp");
+}
+
+window.addEventListener("load", bannerAnimation);
+
+const linkAvis = document.querySelector(".link-avis");
+
+function replaceId() {
+  if (window.innerWidth <= 700) {
+    linkAvis.id = "avis";
+  }
+}
+
+replaceId();
+
+function removeId() {
+  if (window.innerWidth >= 700) {
+    linkAvis.removeAttribute("id");
+  }
+}
+
+removeId();
+
+window.addEventListener("resize", removeId);
