@@ -300,11 +300,12 @@ header {
 
 .avis {
   max-width: 960px;
-  margin-top: 36px;
+  margin-top: 38px;
   margin-left: auto;
   margin-right: auto;
   .avis-title {
-    max-width: 261px;
+    font-size: 22px;
+    width: 240px;
     border-bottom: 1px solid $yellow;
     margin-bottom: 42px;
     margin-left: auto;
