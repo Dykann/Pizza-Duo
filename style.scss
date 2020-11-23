@@ -168,11 +168,14 @@ header {
   }
   .pizza-du-mois {
     border: 1px solid black;
-    max-width: 525px;
-    padding: 8px 0;
+    max-width: 500px;
+    padding: 8px;
     line-height: 24px;
     margin-left: auto;
     margin-right: auto;
+    .pizza-du-mois--title {
+      margin-bottom: 4px;
+    }
   }
 
   .pizzas-list {
@@ -300,12 +303,12 @@ header {
 
 .avis {
   max-width: 960px;
-  margin-top: 38px;
+  margin-top: 36px;
   margin-left: auto;
   margin-right: auto;
   .avis-title {
-    font-size: 22px;
-    width: 240px;
+    font-size: 24px;
+    width: 263px;
     border-bottom: 1px solid $yellow;
     margin-bottom: 42px;
     margin-left: auto;

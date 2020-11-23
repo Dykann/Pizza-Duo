@@ -202,11 +202,15 @@ header .header .navbar--item {
 
 .container-menu .pizza-du-mois {
   border: 1px solid black;
-  max-width: 525px;
-  padding: 8px 0;
+  max-width: 500px;
+  padding: 8px;
   line-height: 24px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.container-menu .pizza-du-mois .pizza-du-mois--title {
+  margin-bottom: 4px;
 }
 
 .container-menu .pizzas-list {
@@ -363,14 +367,14 @@ header .header .navbar--item {
 
 .avis {
   max-width: 960px;
-  margin-top: 38px;
+  margin-top: 36px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .avis .avis-title {
-  font-size: 22px;
-  width: 240px;
+  font-size: 24px;
+  width: 263px;
   border-bottom: 1px solid #ffd17c;
   margin-bottom: 42px;
   margin-left: auto;
