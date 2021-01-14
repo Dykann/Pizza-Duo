@@ -29,7 +29,7 @@ setInterval(nextImage, SPEED);
 
 const reviewsUl = document.querySelector(".reviews");
 
-function getGoogleReviews(max = 4) {
+function getGoogleReviews(max = 5) {
   fetch(`https://netflixvirus.vercel.app/api/pizzaduo/${max}`)
     .then((res) => res.json())
     .then((data) => {
@@ -51,7 +51,7 @@ function getGoogleReviews(max = 4) {
     .catch((error) => console.error(error));
 }
 
-getGoogleReviews(4);
+getGoogleReviews(5);
 
 const bannerCovid = document.querySelector(".banner-covid");
 const bannerCovidResp = document.querySelector(".banner-resp");
