@@ -1,6 +1,6 @@
 # Pizza Duo 
 
-This is a professional website I made for a client I designed the website from scratch, I integrated it with HTML, SASS and JS. </br> 
+This is a professional website I made for a client I designed the website from scratch, I integrated it with HTML, SASS and JS. 
 My brother who also is a Developer has contributed to my project by reviewing my pull requests. 
 
 You can check the website on: https://pizza-duo.netlify.app/
