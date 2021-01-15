@@ -1,6 +1,6 @@
 # Pizza Duo 
 
-This is a professional website I made for a client. I designed it on Figma and integrated it using SASS and JS.
+This is a professional website I made for a client. I designed it on Figma and integrated it using SASS and JS. <br>
 I worked in a Git flow environment and my programmer brother would review some of my PRs.
 
 Have a look here: https://pizza-duo.netlify.app/
